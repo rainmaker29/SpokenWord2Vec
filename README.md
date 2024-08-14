@@ -13,7 +13,7 @@ This repo contains python implementation of spoken word2vec models described in 
 }
 ```
 
-These scripts are extensions of the character-based skipgram models [available here](https://github.com/rainmaker29/SpokenWord2Vec). 
+These scripts are extensions of the character-based skipgram models [available here](https://github.com/h-aldarmaki/Word2Vec/tree/main). 
 
 
 ## Sample Data
