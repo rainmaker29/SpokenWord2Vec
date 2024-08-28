@@ -18,7 +18,7 @@ These scripts are extensions of the character-based skipgram models [available h
 
 ## Sample Data
 
-We provide a subset of files from LibriSpeech dev-clean to illustrate the expected directory structure for the feature extraction scripts. To replicate the performance in the paper, you need to generate features for the whole [LibriSpeech ASR Corpurs train-clean-100 set](https://www.openslr.org/12). You will need **32G** of storage for the features generated in steps 1 and 2 for the train-clean-100 set. 
+We provide a subset of files from LibriSpeech dev-clean to illustrate the expected directory structure for the feature extraction scripts. To replicate the performance in the paper, you need to generate features for the whole [LibriSpeech ASR Corpurs train-clean-100 set](https://www.openslr.org/12). 
 
 [LibriSpeech Corpus](https://www.openslr.org/12)
 
@@ -34,6 +34,8 @@ torch, numpy, s3prl, sklearn, librosa
 nltk, Levenshtein, gensim
 
 ```
+
+You will also need sufficient storage for feature extraction. For example, if you extract HuBERT features, you will need at least **86GB** of storage to run steps 1 and 2 for the train-clean-100 set. After step 3, you can delete some of these files to free up space. 
 
 ## Training The Model
 
