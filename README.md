@@ -18,9 +18,22 @@ These scripts are extensions of the character-based skipgram models [available h
 
 ## Sample Data
 
-We provide sample files with MFCC and HuBERT features. To replicate the performance in the paper, you need to generate features for the whole [LibriSpeech ASR Corpurs train-clean-100 set](https://www.openslr.org/12).
+We provide a subset of files from LibriSpeech dev-clean to illustrate the expected directory structure for the feature extraction scripts. To replicate the performance in the paper, you need to generate features for the whole [LibriSpeech ASR Corpurs train-clean-100 set](https://www.openslr.org/12). You will need **32G** of storage for the features generated in steps 1 and 2 for the train-clean-100 set. 
 
-[TODO]
+[LibriSpeech Corpus](https://www.openslr.org/12)
+
+[Alignment files](https://github.com/CorentinJ/librispeech-alignments)
+
+## Dependencies
+
+The scripts run in python 3.x. You will need the following packages:
+
+```
+os, tqdm, argparse, pickle, pandas
+torch, numpy, s3prl, sklearn, librosa
+nltk, Levenshtein, gensim
+
+```
 
 ## Training The Model
 
