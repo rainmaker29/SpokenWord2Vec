@@ -59,7 +59,9 @@ You can also skip the previous steps and use the attached features ```features.z
 
 ### 2. Train skipgram model
 
+![Model](model_e2e.png)
+
 ```
 python step_4_sgns_C_clustered_hubert.py 4
 ```
-This scripts trains the skipgram with negative sampling (sgns) model using the discrete features generated in the previous step. The comamndline argument specifies the scale, s, which can be an integer from 1 to 4 (or more, but we only tested up to 4). This replicates the best performing model in the paper. The code may need about 24 hours to train for 100 epochs. The learned embeddings are evaluated at the end of each epoch using correlations (see paper for more details). 
+This scripts trains the end-to-end skipgram with negative sampling (sgns) model using the discrete features generated in the previous step. The comamndline argument specifies the scale, s, which can be an integer from 1 to 4 (or more, but we only tested up to 4). This replicates the best performing model in the paper. The code may need about 24 hours to train for 100 epochs. The learned embeddings are evaluated at the end of each epoch using correlations (see paper for more details). 
