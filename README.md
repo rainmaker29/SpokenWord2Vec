@@ -55,6 +55,8 @@ python step_3_create_clusters.py --feature_type hubert
 ```
 This step trains KMeans clustering on 10% of the input vectors, then applies the clustering on all the vectors. The output consists of a list of utterances, each utterance is a list of words, and each word is a seuences of cluster ids.
 
+You can also skip the previous steps and use the attached features ```features.zip```
+
 ### 2. Train skipgram model
 
 ```
