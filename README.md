@@ -57,11 +57,21 @@ This step trains KMeans clustering on 10% of the input vectors, then applies the
 
 You can also skip the previous steps and use the attached features ```features.zip```
 
-### 2. Train skipgram model
+### 2. Train Skipgram Model
 
 ![Model](model_e2e.png)
 
 ```
 python step_4_sgns_C_clustered_hubert.py 4
 ```
-This scripts trains the end-to-end skipgram with negative sampling (sgns) model using the discrete features generated in the previous step. The comamndline argument specifies the scale, s, which can be an integer from 1 to 4 (or more, but we only tested up to 4). This replicates the best performing model in the paper. The code may need about 24 hours to train for 100 epochs. The learned embeddings are evaluated at the end of each epoch using correlations (see paper for more details). 
+This scripts trains the end-to-end skipgram with negative sampling (sgns) model using the discrete features generated in the previous step. The comamndline argument specifies the scale, s, which can be an integer from 1 to 4 (or more, but we only tested up to 4). This replicates the best performing model in the paper. The code may need about 2 days to train for 100 epochs. The learned embeddings are evaluated at the end of each epoch using correlations (see paper for more details). 
+
+### 3. Visualize Training Progress
+
+If you save the output of the previous step to a file, you can use the following scripts to plot the correlations while training
+
+```
+python plot_corr.py train_s4.out
+```
+![Results](correlation_plot.png)
+
